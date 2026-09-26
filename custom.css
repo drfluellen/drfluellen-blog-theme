@@ -1,0 +1,110 @@
+/* ===== Centered header (Occasions and Causes) =====
+   Paste into Design → Edit CSS. Loads after the Tufte stylesheet. */
+
+.site-header {
+	width: 55%;               /* same width as the Tufte text column */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.9rem;
+	text-align: center;
+	margin: 1rem 0 1.5rem;
+}
+
+.site-avatar img {
+	display: block;
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	object-fit: cover;
+}
+
+#header a.site-title {
+	font-size: 3.4rem;
+	font-weight: normal;
+	line-height: 1.05;
+	margin: 0.4rem 0 0;
+	color: inherit;
+	text-wrap: balance;
+}
+
+.site-header p.subtitle {
+	width: auto;              /* overrides Tufte's 55% paragraph width */
+	margin: 0;
+	font-size: 1.6rem;
+	font-style: italic;
+	line-height: 1.25;
+	color: #7a7a72;
+}
+
+/* Social icons */
+.site-social {
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 1.6rem;
+	margin: 0.8rem 0 0;
+	padding: 0;
+	width: auto;
+}
+.site-social li { margin: 0; padding: 0; }
+.site-social a {
+	display: block;
+	color: #9a9a92;
+	background: none !important;
+	text-shadow: none !important;
+	transition: color .15s ease;
+}
+.site-social a:hover,
+.site-social a:focus-visible { color: #111; }
+.site-social svg {
+	display: block;
+	width: 26px;
+	height: 26px;
+	fill: currentColor;
+}
+
+/* Page navigation */
+.site-nav {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 0.4rem 2.2rem;
+	margin-top: 1.4rem;
+}
+#main-nav.site-nav a.main-nav-link {
+	font-size: 1.45rem;
+	margin: 0;
+	font-variant: small-caps;
+	letter-spacing: 0.04em;
+}
+
+/* Phones: Tufte's text column goes full width below 760px */
+@media (max-width: 760px) {
+	.site-header { width: 100%; margin-bottom: 2.5rem; }
+	#header a.site-title { font-size: 2.5rem; }
+	.site-header p.subtitle { font-size: 1.3rem; }
+	.site-avatar img { width: 96px; height: 96px; }
+	.site-social { gap: 1.3rem; }
+	.site-nav { gap: 0.3rem 1.6rem; }
+}
+
+/* Dark mode, matching Tufte's own dark palette */
+@media (prefers-color-scheme: dark) {
+	.site-header p.subtitle { color: #aeb5c2; }
+	.site-social a { color: #8b93a3; }
+	.site-social a:hover,
+	.site-social a:focus-visible { color: #eceff4; }
+}
+
+/* Subtitle attribution line (e.g. "– Fluellen, Henry V, 5.1") */
+.site-header .subtitle-attr {
+	display: block;
+	margin-top: 0.45rem;
+	font-size: 0.72em;
+	font-style: normal;
+	letter-spacing: 0.02em;
+}
+.site-header .subtitle-attr em { font-style: italic; }
+.site-header p.subtitle { text-wrap: balance; }
