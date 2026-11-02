@@ -55,8 +55,8 @@
 		"home": [ "HTML", "RSS", "JSON", "RSD", "ArchiveJSON", "PhotosJSON", "PodcastXML", "PodcastJSON" ],
 		"page": [ "HTML" ],
 		"section": [ "HTML" ],
-		"taxonomy": [ "HTML", "RSS", "JSON" ],
-		"taxonomyTerm": [ "HTML", "RSS", "JSON" ]
+		"term": [ "HTML", "RSS", "JSON" ],
+		"taxonomy": [ "HTML", "RSS", "JSON" ]
 	},
 	"taxonomies": {
 		"category": "categories"
